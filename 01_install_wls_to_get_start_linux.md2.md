@@ -1,4 +1,4 @@
-# 1. [Install WLS](https://medium.com/@gmusumeci/linux-on-windows-totally-how-to-install-wsl-1-and-wsl-2-307c9dd38a36)
+# [Install WLS](https://medium.com/@gmusumeci/linux-on-windows-totally-how-to-install-wsl-1-and-wsl-2-307c9dd38a36)
 * Please use the powershell (Administrator)
 ## 1. Check Windows 10 Build
 * We need to run Windows Build 16215 or later to install WSL 1
