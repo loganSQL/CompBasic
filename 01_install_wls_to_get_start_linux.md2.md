@@ -7,7 +7,7 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ```
 * If not 16215 above, update it https://www.microsoft.com/en-ca/software-download/windows10
 
-## 2. install WSL 1
+## 2. Install WSL 1
 * check whether WSL is enabled
 ```
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -25,23 +25,23 @@ or
 * using Microsoft Store to install a Linux Distro (Ubuntu 18.04)
 
 ## 5. Run the installer
-* first time install, if you manually download and unzip to directory
+* first time install only, if you manually download and unzip to directory
 ```
 ubuntu.exe 
 ```
 
-## 6. subsequently by start bash
+## 6. Subsequently just start bash
 ```
 bash
 ```
 
 ## 7. Create a UNIX user
-* testuser 
-* if forget password, go back to Windows C:
+* create a user only during first time testuser 
+* if forget password later, go back to Windows C and set to root
 ```
 ubuntu config --default-user root
 ```
-* reset back the user
+* reset back the test user
 ```
 ubuntu config --default-user testuser
 ```
@@ -50,7 +50,6 @@ ubuntu config --default-user testuser
 ```
 lsb_release -a
 ```
-
 * find your local drives mounted (C:)
 ```
 ll /mnt/c
@@ -72,7 +71,9 @@ sudo apt-get install gcc
 which gcc
 gcc --version
 ```
-* write your first program
+## 10. Write your first program in C
+* nano is the default text editor
+* * After writing your program, press Ctrl + O and hit Enter key to save your program. To exit nano press Ctrl + X
 ```
 su testuser
 cd /mnt/c/temp
