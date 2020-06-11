@@ -1,6 +1,6 @@
 # 1. [Install WLS](https://medium.com/@gmusumeci/linux-on-windows-totally-how-to-install-wsl-1-and-wsl-2-307c9dd38a36)
 * Please use the powershell (Administrator)
-##1. Check Windows 10 Build #
+## 1. Check Windows 10 Build
 * We need to run Windows Build 16215 or later to install WSL 1
 ```
 systeminfo | Select-String "^OS Name","^OS Version"
@@ -16,7 +16,7 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
-## 3. restart 
+## 3. Restart 
 * Then, restart our computer when it is asked.
 
 ## 4. Installing a Linux Distro on WSL
@@ -30,7 +30,7 @@ or
 ubuntu.exe 
 ```
 
-## 6. subsequently use
+## 6. subsequently by start bash
 ```
 bash
 ```
@@ -46,12 +46,6 @@ ubuntu config --default-user root
 ubuntu config --default-user testuser
 ```
 ## 8. Other commands on Ubuntu
-* Run distro update / upgrade
-```
-sudo apt-get update
-sudo apt-get upgrade
-```
-
 * check current Linux distro
 ```
 lsb_release -a
@@ -63,6 +57,11 @@ ll /mnt/c
 cd /mnt/c
 
 ls /mnt/c/temp
+```
+* Run distro update / upgrade, if needed
+```
+sudo apt-get update
+sudo apt-get upgrade
 ```
 
 ## 9. Install gcc compiler for C programming language
@@ -76,7 +75,7 @@ gcc --version
 * write your first program
 ```
 su testuser
-cd /mnt/c/Test
+cd /mnt/c/temp
 nano hello.c
 ```
 * paste the following
@@ -97,8 +96,7 @@ gcc hello.c -o hello
 ```
 ./hello
 ```
-* [best tutorial of C]
-(https://beginnersbook.com/2014/01/c-tutorial-for-beginners-with-examples/)
+* [best tutorial of C](https://beginnersbook.com/2014/01/c-tutorial-for-beginners-with-examples/)
 
 
 ## 10. Why WSL
